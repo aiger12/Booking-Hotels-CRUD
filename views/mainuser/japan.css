@@ -1,0 +1,682 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+ 
+
+body,html {
+  weight: 100%;
+  height: 100%;
+  background-color:#DFDAE3;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+
+li{
+  padding-left: 2em;
+  padding-top: 1.2em;
+  padding-right: 2em;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 110%;
+}
+
+
+    .navbar-nav{
+        text-align: center;
+
+    }
+
+
+header .mainicon{
+  position:absolute;
+  margin-left: 2em;
+}
+
+.title{
+  margin-top: 10%;
+}
+#myDiv{
+  margin-left:2%;
+}
+
+.titletext{
+  font-size: 3vw;
+  color: white;
+  text-shadow: 2px 2px  gray;
+  
+}
+
+.des{
+  color:#FFF5EE;
+  width: 55%;
+  padding-top: 0.2em;
+  text-shadow: 2px 2px  gray;
+}
+
+#intro {
+  background:linear-gradient(to bottom, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.7)), url(Your-ultimate-guide-to-Tokyo-Japan1.webp);
+  
+  height: 100%;
+  width:100%;
+  background-size: cover; 
+  background-position: center center;
+}
+
+#purpleblock {
+
+  border-radius:  10px;
+  background-color: #9A40E0B5;
+  background-color: rgb(154, 64, 224, 0.3);
+  background-size: cover;
+  box-shadow: 5px 5px 5px rgb(154, 64, 224, 0.5);
+
+}
+
+.parentPurple{
+    background:linear-gradient(to top , rgba(0,0,0,0) 10%, rgba(95, 34, 169,0.6));
+    padding-top: 2%;
+}
+.superPurple{
+    background:linear-gradient(to top , rgba(0,0,0,0) 90%, rgba(0,0,0,0.5));
+}
+.ocean{
+  
+  background-image: url(Vector8.png);
+  height: 100%;
+  background-size: cover;
+  margin-top: 12%;
+  padding-top:8%;
+   padding-bottom:8%;
+}
+
+.endpage {
+  background-image: url(Vector9.png);
+  height: 100%;
+  background-size: cover;
+  margin-top: 13%;
+
+}
+
+
+
+.textcity {
+  margin-top: 5%;
+  margin-left: 10%;
+  font-size: 100%;
+}
+
+
+.directions {
+  margin-top: -4%;
+  margin-left: 43%;
+  font-size: 2vw;
+  text-shadow: 2px 2px  gray;
+}
+
+/*image mosaic block*/
+.image-mosaic {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: 240px;
+  position: relative;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #353535;
+  font-size: 3rem;
+  color: #fff;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .card-tall {
+    grid-row: span 2 / auto;
+  }
+
+  .card-wide {
+    grid-column: span 2 / auto;
+  }
+}
+
+.imgtext{
+  color:white;
+  font-family: 'Trebuchet MS', sans-serif;
+  text-shadow: 2px 2px  black;
+}
+
+
+.Plan {
+  font-size: 45px;
+  color:#06114f;
+  text-shadow: 1px 1px  #59515e;
+  
+}
+.Plantext {
+  font-size: 35px;
+  color: #332649A1;
+  text-shadow: 1px 1px  #c7afde;
+}
+
+
+
+.square {
+
+  height: 160px;
+  width: 160px;
+  border-radius: 23px;
+  background: #43195799;
+}
+
+
+
+.icons {
+  height: 10px;
+  width: 10px;
+  padding: 20px 0 0 15px;
+}
+
+
+
+.clearplace {
+
+  width: 100px;
+  height: 100px;
+  margin-top:20vw;
+}
+
+
+
+.opinion{
+  margin-top: 5%;
+}
+
+.Customer {
+  
+  color: #102746;
+  font-size: 35px;
+}
+.Trusted {
+  color: #0B132A;
+  font-size: 3vw;
+  text-align: center;
+  
+
+}
+.these {
+  text-align: center;
+  color: #332649;
+  font-size:25px;
+  
+}
+
+
+
+/*----------review section------------*/
+.review{
+  margin-top: 7%;
+  margin-left:1.3%;
+}
+
+.boxx{
+  
+  height: 230px;
+  width: 400px;
+  border-radius: 23px;
+  background: white;
+  border: 2px solid #6D4A7A;
+  box-shadow: 10px 5px 5px gray;
+}
+
+
+.textinbox {
+  margin-left: 27px;
+  margin-top: 6px;
+  font-size: 20px;
+}
+.textot {
+margin-top: 120px;
+font-size: 16px;
+width: 340px;
+margin-left: 50px;
+
+}
+.textot1 {
+  margin-top: 120px;
+  font-size: 17px;
+  width: 310px;
+  height: 100px;
+  margin-left: 50px;
+}
+.textot2 {
+  font-size: 16px;
+  margin-top: 115px;
+  width: 310px;
+  height: 100px;
+  margin-left: 50px;
+}
+
+.photop {
+  float: left;
+  margin-top:-180px;
+  margin-left: 43px;
+}
+
+.namec {
+  float: left;
+  margin-top:-173px;
+  margin-left: 125px;
+  font-size: 18px;
+}
+
+
+.count {
+  float: left;
+  margin-top:-148px;
+  margin-left: 126px;
+  font-size: 14px;
+  color: #4F5665;
+}
+
+
+.numberr {
+  float: right;
+  font-size: 16px;
+  color:#0B132A;
+  margin-top: -173px;
+  margin-right: 68px;
+}
+
+.iconstar {
+  float: right;
+  font-size: 16px;
+  color:#0B132A;
+  margin-top: -173px;
+  margin-right: 40px;
+}
+
+/*----------------------------------------*/
+
+
+
+
+
+.japatour {
+  width:60%;
+  font-size: 18px;
+  color:  #4F5665;
+  text-align:center;
+  margin: 10% 0 0 5vw;
+}
+
+
+.endicon{
+    margin-top: 20%;
+    margin-left: 30%;
+}
+
+.social{
+  margin-left: 17%;
+  margin-top:5%;
+}
+.copyright {
+
+  color: #AFB5C0;
+  text-align:center;
+  margin-right: 16%;
+  margin-top:5%;
+}
+
+
+
+.Mainicon {
+  float: left;
+  margin-top: -310px;
+  margin-left: -49vw;
+
+}
+
+
+
+/* Text Find Hotel  */
+.findhotel{
+  margin-left: 42%;
+  margin-top: 2%;
+  color:#DCDCDC;
+  font-family: Georgia, serif;
+  text-shadow: 2px 2px  #929394;
+  
+}
+
+/* Two seperate texts: From and To  */
+.fromTo{
+  font-size: 130%;
+  color: white ;
+  font-family: Georgia, serif;
+  text-shadow: 2px 2px  gray;
+}
+
+/* Select button */
+option{
+   color: black;
+}
+
+select {
+   font-family: 'Open Sans', sans-serif;
+
+}
+
+
+
+
+
+/* leaf animations */
+
+#leaves {position:absolute;top:-50px;width:100%; text-align: right; }
+
+#leaves i {
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    background: linear-gradient(to bottom right, #e675c9, #c5299e);
+    transform: skew(20deg);
+    border-radius: 5% 40% 70%;
+    box-shadow: inset 0px 0px 1px #222;
+    border: 1px solid rgb(148, 71, 138);
+    z-index: 1;
+    animation: falling 5s 0s infinite;
+
+}
+
+
+#leaves i:nth-of-type(1n) { animation: falling3 8s 0s infinite; }
+#leaves i:nth-of-type(2n) { animation: falling2 5s 0s infinite; }
+#leaves i:nth-of-type(2n) { animation: falling3 5s 0s infinite; }
+#leaves i:nth-of-type(3n) { animation: falling3 7s 0s infinite; }
+#leaves i:nth-of-type(4n) { animation: falling3 10s 0s infinite; }
+
+#leaves i:before {
+  position: absolute;
+  content: '';
+  top: 117px;
+  right: 9px;
+  height: 27px;
+  width: 32px;
+  transform: rotate(49deg);
+  border-radius: 0% 15% 15% 0%;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  border-left: 0px solid #222;
+  border-right: 1px solid #222;
+  background: linear-gradient(to right, rgb(231, 134, 215), #e46dd0);
+  z-index: 1;
+
+}
+
+#leaves i:after {
+  content: '';
+  height: 125px;
+  width: 10px;
+  background: linear-gradient(to right, rgba(0,0,0,.15), rgba(0,0,0,0));
+  display: block;
+  transform: rotate(125deg);
+  position: absolute;
+  left: 85px;
+  border-radius:50%;
+}
+
+
+#leaves i:nth-of-type(n)    { height:23px; width:30px; }
+#leaves i:nth-of-type(n):before { width:7px; height:5px; top:17px; right:1px; }
+#leaves i:nth-of-type(n):after { width:2px; height:17px; left: 12px; top:0px; }
+
+#leaves i:nth-of-type(2n+1)    { height:11px; width:16px; }
+#leaves i:nth-of-type(2n+1):before { width:4px; height:3px; top:7px; right:0px; }
+#leaves i:nth-of-type(2n+1):after { width:2px; height:6px; left: 5px; top:1px; }
+
+#leaves i:nth-of-type(3n+2)  { height:17px; width:23px; }
+#leaves i:nth-of-type(3n+2):before  { height:4px; width:4px; top:12px; right:1px; }
+#leaves i:nth-of-type(3n+2):after  { height:10px; width:2px; top:1px; left:8px; }
+
+#leaves i:nth-of-type(n)   { animation-delay: 1.9s;}
+#leaves i:nth-of-type(2n)  { animation-delay: 1.9s;}
+#leaves i:nth-of-type(3n)  { animation-delay: 2.3s;}
+#leaves i:nth-of-type(4n)  { animation-delay: 4.4s;}
+#leaves i:nth-of-type(5n)  { animation-delay: 5s;  }
+#leaves i:nth-of-type(6n)  { animation-delay: 3.5s;}
+#leaves i:nth-of-type(7n)  { animation-delay: 2.8s;}
+#leaves i:nth-of-type(8n)  { animation-delay: 1.5s;}
+#leaves i:nth-of-type(9n)  { animation-delay: 3.3s;}
+#leaves i:nth-of-type(10n) { animation-delay: 2.5s;}
+#leaves i:nth-of-type(11n) { animation-delay: 1.2s;}
+#leaves i:nth-of-type(12n) { animation-delay: 4.1s;}
+#leaves i:nth-of-type(13n) { animation-delay: 1s;  }
+#leaves i:nth-of-type(14n) { animation-delay: 3.7s;}
+#leaves i:nth-of-type(15n) { animation-delay: 3s;  }
+#leaves i:nth-of-type(16n)   { animation-delay: 1.9s;}
+#leaves i:nth-of-type(17n)  { animation-delay: 3.9s;}
+#leaves i:nth-of-type(18n)  { animation-delay: 2.3s;}
+#leaves i:nth-of-type(19n)  { animation-delay: 4.4s;}
+#leaves i:nth-of-type(20n) { animation-delay: 1s;  }
+#leaves i:nth-of-type(21n) { animation-delay: 4.7s;}
+#leaves i:nth-of-type(22n) { animation-delay: 3s;  }
+#leaves i:nth-of-type(22n)  { animation-delay: 3,3s;  }
+#leaves i:nth-of-type(23n)  { animation-delay: 3.5s;}
+#leaves i:nth-of-type(24n)  { animation-delay: 2.8s;}
+#leaves i:nth-of-type(25n)  { animation-delay: 1.5s;}
+#leaves i:nth-of-type(26n)  { animation-delay: 3.3s;}
+#leaves i:nth-of-type(27n) { animation-delay: 2.5s;}
+#leaves i:nth-of-type(28n) { animation-delay: 1.2s;}
+#leaves i:nth-of-type(29n) { animation-delay: 1.1s;}
+
+#leaves i:nth-of-type(n)    { background: linear-gradient(to bottom right, #bb77bb, #be50ac); }
+#leaves i:nth-of-type(2n+2)  { background: linear-gradient(to bottom right, #e26bd2, #c96fa0); }
+#leaves i:nth-of-type(4n+1)  { background: linear-gradient(to bottom right, rgb(219, 119, 186), #9e30a1); }
+
+#leaves i:nth-of-type(n)    { opacity: .7;}
+#leaves i:nth-of-type(3n+1)  { opacity: .5;}
+#leaves i:nth-of-type(3n+2)  { opacity: .3;}
+
+#leaves i:nth-of-type(n)    {transform: rotate(180deg);}
+
+
+#leaves i:nth-of-type(n) { animation-timing-function:ease-in-out;}
+
+@keyframes falling {
+    
+    0% {
+        -webkit-transform:
+            translate3d(300,0,0)
+            rotate(0deg);
+    }
+    
+    100% {
+        -webkit-transform:
+            translate3d(-350px,900px,0)
+            rotate(90deg);
+        opacity: 0;
+    }
+}
+
+@keyframes falling3 {
+     0% {
+        transform:
+            translate3d(0,0,0)
+            rotate(-20deg);
+    }
+    
+    100% {
+        transform:
+            translate3d(-230px,800px,0)
+            rotate(-70deg);
+        opacity: 0;
+    }
+}
+
+@keyframes falling2 {
+     0% {
+        transform:
+            translate3d(0,0,0)
+            rotate(90deg);
+    }
+    
+    100% {
+        transform:
+            translate3d(-400px,700px,0)
+            rotate(0deg);
+        opacity: 0;
+    }
+}
+
+
+
+
+
+/*BOX ANIMATION USED IN REVIEWS*/
+@keyframes wipe-enter {
+  0% {
+    transform: translateY(50%);
+  }
+  50% {
+    transform: translateY(-5%);
+  }
+
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .square-animation {
+    animation-name: wipe-enter;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    opacity: 1;
+  }
+
+
+  @keyframes image-enter {
+    0% {
+      transform: scale(0.95, 1);
+      opacity: 0.7;
+    }
+    20% {
+      transform: scale(1, 1);
+      opacity: 1;
+    }
+
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .image-animation {
+      animation-name: image-enter;
+      animation-duration: 4s;
+      animation-iteration-count: 1;
+    }
+
+
+    @keyframes wipe-enter {
+      0% {
+        transform: translateY(20%);
+      }
+      50% {
+        transform: translateY(-2%);
+      }
+
+    }
+
+
+    @media (prefers-reduced-motion: no-preference) {
+      .square-animation2 {
+        animation-name: wipe-enter;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        opacity: 1;
+      }
+
+
+      /*SNACKBAR*/
+      #snackbar {
+        visibility: hidden;
+        min-width: 250px;
+        margin-left: -190px;
+        background-color: rgb(51, 51, 51, 0.8);
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
+        bottom: 30px;
+        font-size: 17px;
+      }
+
+      #snackbar.show {
+        visibility: visible;
+        animation: fadein 0.5s, fadeout 0.5s 10s;
+        animation: fadein 0.5s, fadeout 0.5s 10s;
+      }
+
+      @keyframes fadein {
+        from {
+          bottom: 0;
+          opacity: 0;
+        }
+        to {
+          bottom: 30px;
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadein {
+        from {
+          bottom: 0;
+          opacity: 0;
+        }
+        to {
+          bottom: 30px;
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeout {
+        from {
+          bottom: 30px;
+          opacity: 1;
+        }
+        to {
+          bottom: 0;
+          opacity: 0;
+        }
+      }
+
+      @keyframes fadeout {
+        from {
+          bottom: 30px;
+          opacity: 1;
+        }
+        to {
+          bottom: 0;
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
