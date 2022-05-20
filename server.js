@@ -1,4 +1,5 @@
 const express = require("express")
+const methodOverride=require("method-override")
 const session = require("express-session")
 const MongoDBStore = require("connect-mongodb-session")(session);
 const bodyParser = require("body-parser")
@@ -8,6 +9,7 @@ const path = require("path");
 const mongoURI = config.url;
 const app = express();
 
+app.use(methodOverride("_method"))
 connectDB().then(() => console.log("Database Connected Successfully!!"))
 
 const store = new MongoDBStore({
@@ -26,12 +28,12 @@ app.use(
         store: store,
     })
 ) //stores the session
-app.get("/main",(req, res) => {
+app.get("/",(req, res) => {
     res.render(__dirname+"/views/main/index.ejs")
 })
 
 app.get("/managerr",(req, res) => {
-    res.render(__dirname+"/views/UserPage/manager.ejs")
+    res.render(__dirname+"/views/userPage/manager.ejs")
 })
 
 
@@ -48,5 +50,5 @@ if (port == null || port == "") {
 }
 
 app.listen(port,() =>
-    console.log(`App listening at http://localhost:${port}/main`)
+    console.log(`App listening at http://localhost:${port}/`)
 )

@@ -37,5 +37,5 @@ router
 router
     .route('/delete')
     .get(isAuth, sellerPageController.delete_get)
-    .post(isAuth, sellerPageController.delete_post)
+    .delete(isAuth, sellerPageController.delete_post)
 module.exports = router
