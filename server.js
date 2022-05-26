@@ -1,6 +1,8 @@
 const express = require("express")
 const methodOverride=require("method-override")
 const session = require("express-session")
+const swaggerUi=require('swagger-ui-express')
+swaggerDocument=require("./swagger.json")
 const MongoDBStore = require("connect-mongodb-session")(session);
 const bodyParser = require("body-parser")
 const connectDB = require("./config/db");
@@ -46,9 +48,11 @@ app.use('/seller', require("./routes/sellerRoutes"))
 
 let port = process.env.PORT;
 if (port == null || port == "") {
-    port = 7070;
+    port = 8000;
 }
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 
 app.listen(port,() =>
-    console.log(`App listening at http://localhost:${port}/`)
+    console.log(`App listening at http://localhost:${port}`)
 )

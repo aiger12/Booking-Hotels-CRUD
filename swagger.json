@@ -1,0 +1,710 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "BOOKING HOTELS",
+    "description": "BOOKING HOTELS Project Application API",
+    "license": {
+      "name": "Booking Hotels",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:8000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "ejs"
+  ],
+  "produces": [
+    "ejs"
+  ],
+  "paths": {
+    "/seller": {
+      "post": {
+        "tags": [
+          "Hotels"
+        ],
+        "description": "Create new hotel in a system",
+        "parameters": [
+          {
+            "name": "hotel",
+            "in": "body",
+            "description": "Hotel that we want to add for system",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          }
+        ],
+        "produces": [
+          "ejs"
+        ],
+        "responses": {
+          "200": {
+            "description": "New hotel was add",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          },
+          "409": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/seller/read": {
+      "get": {
+        "tags": [
+          "Hotels"
+        ],
+        "summary": "Get all hotels from system",
+        "responses": {
+          "200": {
+            "description": "Read all hotels",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          }
+        }
+      }
+    },
+    "/seller/find": {
+      "get": {
+        "tags": [
+          "Hotels"
+        ],
+        "summary": "Find one hotel from system",
+        "responses": {
+          "200": {
+            "description": "Find one hotel from system",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          }
+        }
+      }
+    },
+    "/seller/update": {
+      "patch": {
+        "tags": [
+          "Hotels"
+        ],
+        "description": "Update one hotel from system",
+        "parameters": [
+          {
+            "name": "hotel",
+            "in": "body",
+            "description": "Hotel that we want to add for system",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          }
+        ],
+        "produces": [
+          "ejs"
+        ],
+        "responses": {
+          "200": {
+            "description": "New hotel was update",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          },
+          "409": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/seller/delete": {
+      "delete": {
+        "tags": [
+          "Hotels"
+        ],
+        "description": "Delete one hotel in a system",
+        "parameters": [
+          {
+            "name": "hotel",
+            "in": "body",
+            "description": "Hotel that we want to add for system",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          }
+        ],
+        "produces": [
+          "ejs"
+        ],
+        "responses": {
+          "200": {
+            "description": "New hotel was deleted",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          },
+          "409": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/manager/login": {
+      "post": {
+        "tags": [
+          "Manager"
+        ],
+        "description": "Log in new manager",
+        "parameters": [
+          {
+            "name": "firstName",
+            "in": "body",
+            "description": "Log in new manager",
+            "schema": {
+              "$ref": "#/definitions/Manager"
+            }
+          }
+        ],
+        "produces": [
+          "ejs"
+        ],
+        "responses": {
+          "200": {
+            "description": "Manager was add",
+            "schema": {
+              "$ref": "#/definitions/Manager"
+            }
+          },
+          "409": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/manager/signup": {
+      "post": {
+        "tags": [
+          "Manager"
+        ],
+        "description": "Sign up new manager",
+        "parameters": [
+          {
+            "name": "hotel",
+            "in": "body",
+            "description": "Sign up new manager",
+            "schema": {
+              "$ref": "#/definitions/Manager"
+            }
+          }
+        ],
+        "produces": [
+          "ejs"
+        ],
+        "responses": {
+          "200": {
+            "description": "New manager was add",
+            "schema": {
+              "$ref": "#/definitions/Manager"
+            }
+          },
+          "409": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/manager/logout": {
+      "post": {
+        "tags": [
+          "Manager"
+        ],
+        "description": "Log out manager from system",
+        "parameters": [
+          {
+            "name": "hotel",
+            "in": "body",
+            "description": "Log out manager from system",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "produces": [
+          "ejs"
+        ],
+        "responses": {
+          "200": {
+            "description": "Manager was log out",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "409": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/seller/login": {
+      "post": {
+        "tags": [
+          "Assistant"
+        ],
+        "description": "Create new user in a system",
+        "parameters": [
+          {
+            "name": "firstName",
+            "in": "body",
+            "description": "Hotel that we want to add for system",
+            "schema": {
+              "$ref": "#/definitions/Assistant"
+            }
+          }
+        ],
+        "produces": [
+          "ejs"
+        ],
+        "responses": {
+          "200": {
+            "description": "New hotel was add",
+            "schema": {
+              "$ref": "#/definitions/Assistant"
+            }
+          },
+          "409": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/seller/signup": {
+      "post": {
+        "tags": [
+          "Assistant"
+        ],
+        "description": "Create new user in a system",
+        "parameters": [
+          {
+            "name": "hotel",
+            "in": "body",
+            "description": "Hotel that we want to add for system",
+            "schema": {
+              "$ref": "#/definitions/Assistant"
+            }
+          }
+        ],
+        "produces": [
+          "ejs"
+        ],
+        "responses": {
+          "200": {
+            "description": "New hotel was add",
+            "schema": {
+              "$ref": "#/definitions/Assistant"
+            }
+          },
+          "409": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/seller/logout": {
+      "post": {
+        "tags": [
+          "Assistant"
+        ],
+        "description": "Create new user in a system",
+        "parameters": [
+          {
+            "name": "hotel",
+            "in": "body",
+            "description": "Hotel that we want to add for system",
+            "schema": {
+              "$ref": "#/definitions/Assistant"
+            }
+          }
+        ],
+        "produces": [
+          "ejs"
+        ],
+        "responses": {
+          "200": {
+            "description": "New hotel was add",
+            "schema": {
+              "$ref": "#/definitions/Assistant"
+            }
+          },
+          "409": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/manager": {
+      "post": {
+        "tags": [
+          "Assistant"
+        ],
+        "description": "Create new user in a system",
+        "parameters": [
+          {
+            "name": "hotel",
+            "in": "body",
+            "description": "Hotel that we want to add for system",
+            "schema": {
+              "$ref": "#/definitions/Assistant"
+            }
+          }
+        ],
+        "produces": [
+          "ejs"
+        ],
+        "responses": {
+          "200": {
+            "description": "New hotel was add",
+            "schema": {
+              "$ref": "#/definitions/Assistant"
+            }
+          },
+          "409": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/manager/read": {
+      "get": {
+        "tags": [
+          "Assistant"
+        ],
+        "summary": "Get all assistant from base",
+        "responses": {
+          "200": {
+            "description": "New hotel was add",
+            "schema": {
+              "$ref": "#/definitions/Assistant"
+            }
+          }
+        }
+      }
+    },
+    "/manager/find": {
+      "get": {
+        "tags": [
+          "Assistant"
+        ],
+        "summary": "Find one assistant from base",
+        "responses": {
+          "200": {
+            "description": "New hotel was add",
+            "schema": {
+              "$ref": "#/definitions/Assistant"
+            }
+          }
+        }
+      }
+    },
+    "/manager/update": {
+      "patch": {
+        "tags": [
+          "Assistant"
+        ],
+        "description": "Create new user in a system",
+        "parameters": [
+          {
+            "name": "hotel",
+            "in": "body",
+            "description": "Hotel that we want to add for system",
+            "schema": {
+              "$ref": "#/definitions/Assistant"
+            }
+          }
+        ],
+        "produces": [
+          "ejs"
+        ],
+        "summary": "Update one assistant",
+        "responses": {
+          "200": {
+            "description": "New hotel was add",
+            "schema": {
+              "$ref": "#/definitions/Assistant"
+            }
+          },
+          "409": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/manager/delete": {
+      "delete": {
+        "tags": [
+          "Assistant"
+        ],
+        "description": "Create new user in a system",
+        "parameters": [
+          {
+            "name": "hotel",
+            "in": "body",
+            "description": "Hotel that we want to add for system",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          }
+        ],
+        "produces": [
+          "ejs"
+        ],
+        "summary": "Delete one assistant",
+        "responses": {
+          "200": {
+            "description": "New hotel was add",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          },
+          "409": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/user/login": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "Create new user in a system",
+        "parameters": [
+          {
+            "name": "firstName",
+            "in": "body",
+            "description": "Hotel that we want to add for system",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "produces": [
+          "ejs"
+        ],
+        "responses": {
+          "200": {
+            "description": "New hotel was add",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "409": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/user/signup": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "Create new user in a system",
+        "parameters": [
+          {
+            "name": "hotel",
+            "in": "body",
+            "description": "Hotel that we want to add for system",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "produces": [
+          "ejs"
+        ],
+        "responses": {
+          "200": {
+            "description": "New hotel was add",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "409": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/user/logout": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "Create new user in a system",
+        "parameters": [
+          {
+            "name": "hotel",
+            "in": "body",
+            "description": "Hotel that we want to add for system",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "produces": [
+          "ejs"
+        ],
+        "responses": {
+          "200": {
+            "description": "New hotel was add",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "409": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/user/update": {
+      "patch": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Update user's date",
+        "description": "Create new user in a system",
+        "parameters": [
+          {
+            "name": "hotel",
+            "in": "body",
+            "description": "Hotel that we want to add for system",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "produces": [
+          "ejs"
+        ],
+        "responses": {
+          "200": {
+            "description": "New hotel was add",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "409": {
+            "description": "Error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Product": {
+      "required": [
+        "name",
+        "price",
+        "city",
+        "rating"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "default": ""
+        },
+        "price": {
+          "type": "string",
+          "default": ""
+        },
+        "city": {
+          "type": "string",
+          "default": ""
+        },
+        "rating": {
+          "type": "string",
+          "default": ""
+        }
+      }
+    },
+    "Assistant": {
+      "required": [
+        "firstName",
+        "lastName",
+        "email",
+        "password"
+      ],
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "default": ""
+        },
+        "lastName": {
+          "type": "string",
+          "default": ""
+        },
+        "email": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "password": {
+          "type": "string",
+          "default": ""
+        }
+      }
+    },
+    "User": {
+      "required": [
+        "firstName",
+        "lastName",
+        "email",
+        "password"
+      ],
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "default": ""
+        },
+        "lastName": {
+          "type": "string",
+          "default": ""
+        },
+        "email": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "password": {
+          "type": "string",
+          "default": ""
+        }
+      }
+    },
+    "Manager": {
+      "required": [
+        "firstName",
+        "lastName",
+        "email",
+        "password"
+      ],
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "default": ""
+        },
+        "lastName": {
+          "type": "string",
+          "default": ""
+        },
+        "email": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "password": {
+          "type": "string",
+          "default": ""
+        }
+      }
+    }
+  }
+}

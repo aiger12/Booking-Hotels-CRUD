@@ -8,7 +8,11 @@ let schema = new mongoose.Schema({
         type: String,
         default: ''
     },
-    quantity: {
+    city: {
+        type: String,
+        default: ''
+    },
+    rating: {
         type: String,
         default: ''
     },
