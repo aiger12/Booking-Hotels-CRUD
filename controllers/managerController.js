@@ -1,8 +1,8 @@
-const bcrypt = require("bcryptjs")
 const Manager = require("../models/managerModel");
 const Assistant = require("../models/sellerModel");
 const Customer = require("../models/userModel");
 const path = require("path");
+const passport=require('passport')
 
 exports.login_get = async (req, res) => {
     const error = req.session.error;
@@ -10,27 +10,45 @@ exports.login_get = async (req, res) => {
     res.render(path.resolve('./views/managerPage/login.ejs'), { err: error });
 };
 
+// exports.login_post = async (req, res) => {
+//     const { email, password } = req.body;
+//
+//     const user = await Manager.findOne({ email });
+//
+//     if (!user) {
+//         req.session.error = "Invalid email";
+//         return res.redirect('/manager/login');
+//     }
+//
+//
+//     req.session.isAuth = true;
+//     req.session.firstName = user.firstName;
+//     req.session.lastName = user.lastName;
+//     res.redirect('/manager');
+// };
+
 exports.login_post = async (req, res) => {
-    const { email, password } = req.body;
+    let manager = new Manager({
+        email: req.body.email,
+        password: req.body.password
+    })
 
-    const user = await Manager.findOne({ email });
-
-    if (!user) {
-        req.session.error = "Invalid email";
-        return res.redirect('/manager/login');
-    }
-
-    const isMatch = await bcrypt.compare(password, user.password);
-
-    if (!isMatch) {
-        req.session.error = "Invalid password";
-        return res.redirect('/manager/login');
-    }
+    req.login(manager, function (err){
+        if(err){
+            console.log(err)
+        }else {
+            passport.authenticate("local")(req, res, function (){
+                res.redirect("/loginmanager")
+            })
+        }
+    })
 
     req.session.isAuth = true;
-    req.session.firstName = user.firstName;
-    req.session.lastName = user.lastName;
-    res.redirect('/manager');
+    req.session.isSeller=false;
+    req.session.isManager=false;
+    req.session.firstName = manager.firstName;
+    req.session.lastName = manager.lastName;
+    res.redirect('/loginmanager');
 };
 
 exports.signup_get = async (req, res) => {
@@ -53,16 +71,15 @@ exports.signup_post = async (req, res) => {
 
     if (assistant || customer || manager) {
         req.session.error = "Email taken!";
-        return res.redirect('/manager/signup');
+        return res.redirect('/manager/login');
     }
 
-    const hashPsw = await bcrypt.hash(password, 12);
 
     manager = new Manager({
         firstName,
         lastName,
         email,
-        password: hashPsw,
+        password,
     });
 
     await manager.save();
